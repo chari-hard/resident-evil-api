@@ -1,7 +1,7 @@
-package org.capcom.re4r.controllers;
+package org.capcom.re.controllers;
 
-import org.capcom.re4r.entities.Personagem;
-import org.capcom.re4r.repositories.PersonagemRepository;
+import org.capcom.re.entities.Personagem;
+import org.capcom.re.repositories.PersonagemRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

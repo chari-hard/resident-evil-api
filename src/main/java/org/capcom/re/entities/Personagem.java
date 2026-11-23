@@ -1,4 +1,4 @@
-package org.capcom.re4r.entities;
+package org.capcom.re.entities;
 
 import jakarta.persistence.*;
 

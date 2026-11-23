@@ -1,13 +1,13 @@
-package org.capcom.re4r;
+package org.capcom.re;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Re4rApplication {
+public class ReApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Re4rApplication.class, args);
+        SpringApplication.run(ReApplication.class, args);
     }
 
 }

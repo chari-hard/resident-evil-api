@@ -1,4 +1,4 @@
-package org.capcom.re4r;
+package org.capcom.re;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
