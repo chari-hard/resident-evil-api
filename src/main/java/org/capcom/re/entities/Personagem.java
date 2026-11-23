@@ -9,21 +9,18 @@ public class Personagem {
     private Integer id;
     private String nome;
     private String imagem;
-    private String categoria;
     private String situacao;
 
-    public Personagem(Integer id, String nome, String imagem, String categoria, String situacao) {
+    public Personagem(Integer id, String nome, String imagem, String situacao) {
         this.id = id;
         this.nome = nome;
         this.imagem = imagem;
-        this.categoria = categoria;
         this.situacao = situacao;
     }
 
-    public Personagem(String nome, String imagem, String categoria, String situacao) {
+    public Personagem(String nome, String imagem, String situacao) {
         this.nome = nome;
         this.imagem = imagem;
-        this.categoria = categoria;
         this.situacao = situacao;
     }
 
@@ -52,14 +49,6 @@ public class Personagem {
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
     }
 
     public String getSituacao() {

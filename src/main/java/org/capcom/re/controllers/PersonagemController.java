@@ -35,7 +35,6 @@ public class PersonagemController {
         Personagem personagem = repository.getReferenceById(id);
         personagem.setNome(p.getNome());
         personagem.setImagem(p.getImagem());
-        personagem.setCategoria(p.getCategoria());
         personagem.setSituacao(p.getSituacao());
         repository.save(personagem);
     }
