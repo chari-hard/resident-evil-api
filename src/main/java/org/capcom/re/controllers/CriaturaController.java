@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/criaturas")
+@CrossOrigin(origins = "*")
 public class CriaturaController {
     private final CriaturaRepository repository;
 
