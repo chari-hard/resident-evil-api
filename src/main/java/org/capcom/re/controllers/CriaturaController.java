@@ -1,6 +1,8 @@
 package org.capcom.re.controllers;
 
 import org.capcom.re.entities.Criatura;
+import org.capcom.re.entities.Incidente;
+import org.capcom.re.entities.Sobrevivente;
 import org.capcom.re.repositories.CriaturaRepository;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +22,11 @@ public class CriaturaController {
     @GetMapping
     public List<Criatura> listar(){
         return repository.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public Criatura buscarPorId(@PathVariable Integer id) {
+        return repository.findById(id).orElse(null);
     }
 
     @PostMapping

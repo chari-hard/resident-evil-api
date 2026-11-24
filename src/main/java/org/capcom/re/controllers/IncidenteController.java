@@ -1,6 +1,5 @@
 package org.capcom.re.controllers;
 
-import org.capcom.re.entities.Criatura;
 import org.capcom.re.entities.Incidente;
 import org.capcom.re.repositories.IncidenteRepository;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/criaturas")
+@RequestMapping("api/incidentes")
 @CrossOrigin(origins = "*")
 public class IncidenteController {
     private final IncidenteRepository repository;
@@ -20,6 +19,11 @@ public class IncidenteController {
     @GetMapping
     public List<Incidente> listar(){
         return repository.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public Incidente buscarPorId(@PathVariable Integer id) {
+        return repository.findById(id).orElse(null);
     }
 
     @PostMapping

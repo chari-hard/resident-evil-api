@@ -22,6 +22,11 @@ public class VirusController {
         return repository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public Virus buscarPorId(@PathVariable Integer id) {
+        return repository.findById(id).orElse(null);
+    }
+
     @PostMapping
     public void cadastrar(@RequestBody Virus v){
         repository.save(v);

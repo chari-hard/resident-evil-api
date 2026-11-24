@@ -21,6 +21,11 @@ public class PersonagemController {
         return repository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public Personagem buscarPorId(@PathVariable Integer id) {
+        return repository.findById(id).orElse(null);
+    }
+
     @PostMapping
     public void cadastrar(@RequestBody Personagem p){
         repository.save(p);

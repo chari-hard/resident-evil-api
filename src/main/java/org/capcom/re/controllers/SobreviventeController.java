@@ -21,6 +21,11 @@ public class SobreviventeController {
         return repository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public Sobrevivente buscarPorId(@PathVariable Integer id) {
+        return repository.findById(id).orElse(null);
+    }
+
     @PostMapping
     public void cadastrar(@RequestBody Sobrevivente s){
         repository.save(s);
