@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSAA // Arquivo Resident Evil</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+    <div class="brand">
+        <span class="badge">BSAA</span>
+        <div>
+            <h1>Arquivo de Catalogação — Resident Evil</h1>
+            <p class="subtitle">Interface integrada à API REST (Spring Boot)</p>
+        </div>
+    </div>
+
+    <div class="api-config">
+        <label for="apiBaseUrl">Base URL</label>
+        <input id="apiBaseUrl" type="text" value="http://localhost:8080/api" />
+        <button id="btnApplyUrl" type="button" class="btn btn-secondary">Aplicar</button>
+    </div>
+</header>
+
+<main class="container">
+    <nav id="entityTabs" class="tabs" aria-label="Entidades">
+        <button class="tab active" data-entity="personagens" type="button">Personagens</button>
+        <button class="tab" data-entity="sobreviventes" type="button">Sobreviventes</button>
+        <button class="tab" data-entity="incidentes" type="button">Incidentes</button>
+        <button class="tab" data-entity="virus" type="button">Vírus</button>
+        <button class="tab" data-entity="criaturas" type="button">Criaturas</button>
+    </nav>
+
+    <div id="feedbackBanner" class="banner hidden" role="status" aria-live="polite"></div>
+
+    <section class="grid-layout">
+        <div class="card">
+            <div class="card-header">
+                <h2 id="formTitle">Novo registro — Personagens</h2>
+                <button id="btnCancelEdit" type="button" class="btn btn-ghost hidden">Cancelar edição</button>
+            </div>
+
+            <form id="entityForm" class="form-stack">
+                <div id="dynamicFields" class="form-fields"></div>
+                <div class="form-actions">
+                    <button id="btnSubmit" type="submit" class="btn btn-primary">Cadastrar</button>
+                    <button id="btnClearForm" type="button" class="btn btn-secondary">Limpar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <div class="card-header list-header">
+                <div>
+                    <h2 id="listTitle">Registros — Personagens</h2>
+                    <span id="recordCount" class="count-pill">0 itens</span>
+                </div>
+                <div class="toolbar">
+                    <input id="searchInput" type="search" placeholder="Filtrar..." />
+                    <button id="btnRefresh" type="button" class="btn btn-secondary">Atualizar</button>
+                </div>
+            </div>
+
+            <div id="stateContainer" class="state-box">Carregando registros...</div>
+            <div id="itemsList" class="items-list hidden"></div>
+        </div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
