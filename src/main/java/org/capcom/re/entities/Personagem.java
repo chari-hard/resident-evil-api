@@ -8,6 +8,7 @@ public class Personagem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
+    @Column(columnDefinition = "TEXT")
     private String imagem;
     private String situacao;
 
